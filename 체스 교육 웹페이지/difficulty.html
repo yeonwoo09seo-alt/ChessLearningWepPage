@@ -16,6 +16,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.js"></script>
 
     <style>
+        #github{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 25px;
+}
+    #link{
+        position: absolute;
+        bottom: 35px;
+        left: 10px;
+        width: 25px;
+    }
+    #stair{
+        background-image: url("이미지/계단.png");
+        background-repeat: no-repeat;
+        background-position: left center; /* 왼쪽 중앙에 위치 */
+        padding-left: 30px; /* 아이콘 공간 확보를 위해 왼쪽 패딩 추가 */
+        background-size: 20px 20px; /* 아이콘 크기 설정 */
+        height: 30px;
+        line-height: 30px;
+    }
+    #dot{
+        background-image: url("이미지/점.png");
+        background-repeat: no-repeat;
+        background-position: left center; /* 왼쪽 중앙에 위치 */
+        padding-left: 30px; /* 아이콘 공간 확보를 위해 왼쪽 패딩 추가 */
+        background-size: 23px 23px; /* 아이콘 크기 설정 */
+        height: 46px;
+        line-height: 46px;
+    }
         body { background-color: #313131; color: white; margin: 0; }
         .container-wrapper { display: flex; min-height: 100vh; }
         .sidebar { 
@@ -53,27 +83,39 @@
 
 <div class="container-wrapper">
     <nav class="sidebar" id="mySidebar">
-        <div style="text-align: center; margin-bottom: 20px;">
-            <h3>♟️ 체스 배우기</h3>
-        </div>
-        
+        <a href="chess_main.html">
+            <img id="main_img" src="이미지/체스_배우기아이콘 .png" alt="메인 페이지로 이동">
+        </a>
         <nav class="learning-steps">
-            <h5 class="sidebar-text">단계 배우기</h5>
-            <button class="btn btn-dark"><span>초급</span></button>
-            <button class="btn btn-dark"><span>중급</span></button>
-            <button class="btn btn-dark"><span>고급</span></button>
-            <button class="btn btn-dark"><span>평가</span></button>
+            <div class="text-light">
+            <p id="stair">단계 배우기</p>
+            </div>
+            
+                <button class="btn btn-dark **ms-0**" id="beginner-btn">초급</button>
+                <button class="btn btn-dark **ms-0**"  id="intermediate-btn">중급</button>
+                <button class="btn btn-dark **ms-0**" id="advanced-btn">고급</button>
+            
         </nav>
     
         <nav class="detailed-sections">
-            <h5 class="sidebar-text">세부 학습 주제</h5>
-            <button class="btn btn-dark"><span>용어 해설</span></button>
-            <button class="btn btn-dark"><span>유명 경기</span></button>
-            <button class="btn btn-dark"><span>문제 풀기</span></button>
-            <button class="btn btn-dark"><span>오프닝</span></button>
+            <div class="text-light">
+            <p id="dot">세부 학습 주제</p>
+            </div>
+           
+                <button class="btn btn-dark **ms-0**" id="glossary-btn">용어 해설</button>
+                <button class="btn btn-dark **ms-0**" id="master-btn">유명 경기</button>
+                <button class="btn btn-dark **ms-0**" id="puzzles-btn">문제 풀기</button>
+                <button class="btn btn-dark **ms-0**" id="news-btn">오프닝  </button>
+            
         </nav>
-
-        <button class="toggle-btn" id="toggleButton"><span>◀</span></button>
+        <button class="toggle-btn" id="toggleButton">
+            <span>◀</span> </button>
+            <a href="https://github.com/yeonwoo09seo-alt/ChessLearningWepPage/tree/main" target="_blank">
+                <img id="github" src="이미지/깃허브.png" alt="깃허브 주소">
+            </a>
+            <a href="product_detail.html" target="_blank">
+                <img id="link" src="product.jpg" alt="상품 이미지">
+            </a>
     </nav>
     
     <main class="main-content" id="mainContent">
